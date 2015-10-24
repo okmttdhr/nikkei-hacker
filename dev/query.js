@@ -5,7 +5,7 @@ import Promise from 'bluebird';
 function yahooMaApi(text) {
   return new Promise(function (resolve, reject) {
     request
-      .get('https://jlp.yahooapis.jp/MAService/V1/parse')
+      .get('http://jlp.yahooapis.jp/MAService/V1/parse')
       .query({
         results: 'ma',
         sentence: text,

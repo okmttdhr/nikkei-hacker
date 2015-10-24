@@ -4,7 +4,8 @@
   "manifest_version": 2,
   "description": "",
   "permissions": [
-    "tabs"
+    "tabs",
+    "http://jlp.yahooapis.jp/*"
   ],
   "browser_action": {
     "default_popup": "popup.html"

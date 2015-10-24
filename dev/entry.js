@@ -23,6 +23,7 @@ const styleNhLinkHover = {
 const nhLink = $('<a id="nhLink" target="_blank"></a>').text(textDefault).css(styleNhLink);
 
 function addReadFreeBtn() {
+  if (window.location.pathname.split('/')[1] !== 'article') return;
   const btn = $(`<a href="" onclick="" class="cmnc-button" target="_blank"></a>`)
     .html('<span class="cmn-icon_member">［有料会員限定］</span>&nbsp;' + textDefault);
   const text = $('h1.cmn-article_title .cmnc-middle').text();
