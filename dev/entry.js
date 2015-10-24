@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
-import getQuery from './getQuery';
+import {getQuery} from './query';
+import {logSelection, getSelection} from './selection';
 
 const body = $('body');
 const textDefault = '無料で読む';
@@ -20,20 +21,6 @@ const styleNhLinkHover = {
   'opacity': '0.8',
 };
 const nhLink = $('<a id="nhLink" target="_blank"></a>').text(textDefault).css(styleNhLink);
-
-function logSelection(selection, x, y) {
-  console.log('"' + selection + '" was selected at x=' + x + ', y=' + y);
-}
-
-function getSelection() {
-  let selection = '';
-  if (window.getSelection) {
-    selection = window.getSelection();
-  } else if (document.selection) {
-    selection = document.selection.createRange();
-  }
-  return selection.toString();
-}
 
 function addReadFreeBtn() {
   const btn = $(`<a href="" onclick="" class="cmnc-button" target="_blank"></a>`)

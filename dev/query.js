@@ -33,7 +33,7 @@ function xml2query(xml) {
   });
 }
 
-export default function getQuery(text = null) {
+export function getQuery(text = null) {
   return yahooMaApi(text)
     .then((xml) => {
       return xml2query(xml.text);
