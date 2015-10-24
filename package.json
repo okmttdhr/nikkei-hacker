@@ -1,0 +1,41 @@
+{
+  "name": "nikkei-hacker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wabpack": "webpack",
+    "wabpack:watch": "webpack --watch",
+    "eslint": "eslint 'dev'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okmttdhr/nikkei-hacker.git"
+  },
+  "author": "okp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okmttdhr/nikkei-hacker/issues"
+  },
+  "homepage": "https://github.com/okmttdhr/nikkei-hacker",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.19.0",
+    "node-sass": "^3.3.3",
+    "sass-loader": "^3.0.0",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "eslint": "^1.7.3",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-loader": "^1.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "jquery": "^2.1.4",
+    "path": "^0.12.7"
+  }
+}

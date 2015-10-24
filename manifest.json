@@ -1,0 +1,24 @@
+{
+  "name": "nikkei-hacker",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "",
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
