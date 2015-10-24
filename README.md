@@ -2,7 +2,7 @@
 
 ## 概要
 
-nikkei-hacker(日経ハッカー)は、[日本経済新聞](http://www.nikkei.com/)有料記事を無料で読むことができるChrome拡張アプリです。実際には、有料記事の類似記事をGoogleから簡単に検索することができます。
+nikkei-hacker(日経ハッカー)は、<a href="http://www.nikkei.com/" target="_blank">日本経済新聞</a>有料記事を無料で読むことができるChrome拡張アプリです。実際には、有料記事の類似記事をGoogleから簡単に検索することができます。
 
 ## インストール
 
@@ -31,8 +31,6 @@ npm run build
 以下の記事の、`ステップ 2: アプリをテストする`に従い、`パッケージ化されていない拡張機能`を読み込んでください。
 
 * <a href="https://support.google.com/chrome/a/answer/2714278?hl=ja" target="_blank">チュートリアル: Chrome アプリを作成する - Chrome for Work ヘルプ</a>
-
-これでインストールは完了です。
 
 ## 使い方
 
