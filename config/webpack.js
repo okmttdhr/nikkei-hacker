@@ -14,7 +14,7 @@ const webpackConfig = {
     preLoaders: [
       {
         test: /\.js$/,
-        loaders: ['eslint-loader'],
+        loader: 'eslint',
         include: paths.project(config.get('dir_src')),
       },
     ],

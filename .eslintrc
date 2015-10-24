@@ -1,6 +1,8 @@
 {
   "extends": "airbnb",
-  "globals": {},
+  "globals": {
+
+  },
   "rules": {
     "key-spacing": [0, {
       "beforeColon": true,
@@ -9,6 +11,9 @@
     "no-console": 0,
     "no-else-return": 0,
     "space-before-function-paren": [0, "always"],
-    "func-names": 0
+    "func-names": 0,
+    "id-length": [2, {
+      "min": 1
+    }]
   }
 }
