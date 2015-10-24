@@ -6,14 +6,21 @@ import Promise from 'bluebird';
 const body = $('body');
 const textDefault = '無料で読む';
 const textLoading = '読込中';
-const div = $('<a id="nhLink" target="_blank">' + textDefault + '</a>').css({
-  'font-weight': 'bold',
-  'position': 'absolute',
-  'border': '1px solid #000',
+const styleNhLink = {
   'padding': '10px',
+  'background-color': '#0a385b',
+  'border': '1px solid #0a385b',
+  'opacity': '1',
+  'color': '#fff',
   'white-space': 'nowrap',
   'text-align': 'center',
-});
+  'text-decoration': 'none',
+  'position': 'absolute',
+};
+const styleNhLinkHover = {
+  'opacity': '0.8',
+};
+const nhLink = $('<a id="nhLink" target="_blank"></a>').text(textDefault).css(styleNhLink);
 
 function logSelection(selection, x, y) {
   console.log('"' + selection + '" was selected at x=' + x + ', y=' + y);
@@ -61,13 +68,13 @@ function xml2js(selectionXml) {
   });
 }
 
-body.append(div);
+body.append(nhLink);
 body.on('mouseup', (e) => {
   console.log('mouseup');
   const selection = getSelection();
   if (selection !== '') {
     logSelection(selection, e.pageX, e.pageY);
-    $('#nhLink')
+    nhLink
       .css({
         'top': e.pageY + 20 + 'px',
         'left': e.pageX + 20 + 'px',
@@ -79,14 +86,20 @@ body.on('mouseup', (e) => {
         return xml2js(xml.text);
       })
       .then((query) => {
-        $('#nhLink')
+        nhLink
           .attr({'href': 'https://www.google.co.jp/#q=' + query + '&tbm=nws'})
           .text(textDefault);
       });
   } else {
-    $('#nhLink').hide();
+    nhLink.hide();
   }
 });
 body.on('mouseup', '#nhLink', (e) => {
   e.stopPropagation();
+});
+body.on('mouseover', '#nhLink', () => {
+  nhLink.css(styleNhLinkHover);
+});
+body.on('mouseleave', '#nhLink', () => {
+  nhLink.css(styleNhLink);
 });

@@ -12,8 +12,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "http://www.nikkei.com/*"
       ],
       "js": [
         "js/main.js"
