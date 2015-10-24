@@ -35,8 +35,21 @@ function getSelection() {
   return selection.toString();
 }
 
+function addReadFreeBtn() {
+  const btn = $(`<a href="" onclick="" class="cmnc-button" target="_blank"></a>`)
+    .html('<span class="cmn-icon_member">［有料会員限定］</span>&nbsp;' + textDefault);
+  const text = $('h1.cmn-article_title .cmnc-middle').text();
+  getQuery(text)
+    .then((query) => {
+      btn.attr({'href': 'https://www.google.co.jp/#q=' + query + '&tbm=nws'});
+      $('.cmnc-open_article').append(btn);
+    });
+}
 
 body.append(nhLink);
+body.ready(() => {
+  addReadFreeBtn();
+});
 body.on('mouseup', (e) => {
   const text = getSelection();
   if (text !== '') {
