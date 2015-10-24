@@ -2,11 +2,14 @@ import request from 'superagent';
 import {parseString} from 'xml2js';
 import Promise from 'bluebird';
 
+import config from '../config/secret';
+
 function yahooMaApi(text) {
   return new Promise(function (resolve, reject) {
     request
       .get('http://jlp.yahooapis.jp/MAService/V1/parse')
       .query({
+        appid: config.get('appid'),
         results: 'ma',
         sentence: text,
       })
