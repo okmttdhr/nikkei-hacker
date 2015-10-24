@@ -1,7 +1,6 @@
 import $ from 'jquery';
-import request from 'superagent';
-import {parseString} from 'xml2js';
-import Promise from 'bluebird';
+
+import getQuery from './getQuery';
 
 const body = $('body');
 const textDefault = '無料で読む';
@@ -36,44 +35,12 @@ function getSelection() {
   return selection.toString();
 }
 
-function yahooMaApi(selection) {
-  return new Promise(function (resolve, reject) {
-    request
-      .get('https://jlp.yahooapis.jp/MAService/V1/parse')
-      .query({
-        results: 'ma',
-        sentence: selection,
-      })
-      .end(function(err, res) {
-        if (err) return reject(err);
-        return resolve(res);
-      });
-  });
-}
-
-function xml2js(selectionXml) {
-  return new Promise(function (resolve, reject) {
-    parseString(selectionXml, function (err, res) {
-      if (err) return reject(err);
-      let selectionSeparated = '';
-      const wordList = res.ResultSet.ma_result[0].word_list[0].word;
-      wordList.map((item) => {
-        if (item.pos[0] === '名詞') {
-          console.log(item.surface[0]);
-          selectionSeparated += item.surface[0] + '+';
-        }
-      });
-      return resolve(selectionSeparated);
-    });
-  });
-}
 
 body.append(nhLink);
 body.on('mouseup', (e) => {
-  console.log('mouseup');
-  const selection = getSelection();
-  if (selection !== '') {
-    logSelection(selection, e.pageX, e.pageY);
+  const text = getSelection();
+  if (text !== '') {
+    logSelection(text, e.pageX, e.pageY);
     nhLink
       .css({
         'top': e.pageY + 20 + 'px',
@@ -81,10 +48,7 @@ body.on('mouseup', (e) => {
       })
       .text(textLoading)
       .show();
-    yahooMaApi(selection)
-      .then((xml) => {
-        return xml2js(xml.text);
-      })
+    getQuery(text)
       .then((query) => {
         nhLink
           .attr({'href': 'https://www.google.co.jp/#q=' + query + '&tbm=nws'})
