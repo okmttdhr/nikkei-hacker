@@ -7,28 +7,24 @@ nikkei-hacker(日経ハッカー)は、<a href="http://www.nikkei.com/" target="
 ## インストール
 
 ```bash
-git clone https://github.com/okmttdhr/nikkei-hacker.git
-```
-
-```bash
-cd nikkei-hacker
+git clone https://github.com/okmttdhr/nikkei-hacker.git && cd nikkei-hacker
 ```
 
 `config/secret.js`に以下の様なファイルを作成してください。`あなたのappid`は<a href="https://e.developer.yahoo.co.jp/register" target="_blank">こちら</a>から発行できます。
 
-```bash
+```js:config/secret.js
 const config = new Map();
 config.set('appid',  'あなたのappid');
 export default config;
 ```
 
-作成したら、以下のコマンドを実行してください。
+作成したら、以下を実行してください。
 
 ```bash
 npm run build
 ```
 
-以下の記事の、`ステップ 2: アプリをテストする`に従い、`パッケージ化されていない拡張機能`を読み込んでください。
+以下の、`ステップ 2: アプリをテストする`に従い、`パッケージ化されていない拡張機能`を読み込んでください。
 
 * <a href="https://support.google.com/chrome/a/answer/2714278?hl=ja" target="_blank">チュートリアル: Chrome アプリを作成する - Chrome for Work ヘルプ</a>
 
