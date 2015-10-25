@@ -12,7 +12,9 @@ git clone https://github.com/okmttdhr/nikkei-hacker.git && cd nikkei-hacker
 
 `config/secret.js`に以下の様なファイルを作成してください。`あなたのappid`は<a href="https://e.developer.yahoo.co.jp/register" target="_blank">こちら</a>から発行できます。
 
-```js:config/secret.js
+```javascript
+// config/secret.js
+
 const config = new Map();
 config.set('appid',  'あなたのappid');
 export default config;
