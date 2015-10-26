@@ -2,7 +2,7 @@
 
 ## 概要
 
-nikkei-hacker(日経ハッカー)は、<a href="http://www.nikkei.com/" target="_blank">日本経済新聞</a>有料記事を無料で読むことができるChrome拡張アプリです。実際には、類似記事をGoogleから簡単に検索することができます。
+nikkei-hacker(日経ハッカー)は、<a href="http://www.nikkei.com/" target="_blank">日本経済新聞電子版</a>有料記事を無料で読むことができるChrome拡張アプリです。実際には、類似記事をGoogleから簡単に検索することができます。
 
 ## 使い方
 
