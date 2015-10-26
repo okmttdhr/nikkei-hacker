@@ -42,6 +42,6 @@ export function getQuery(text = null) {
       return xml2query(xml.text);
     })
     .then((query) => {
-      return query;
+      return query + '-nikkei';
     });
 }
