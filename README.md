@@ -10,7 +10,7 @@ nikkei-hacker(日経ハッカー)は、<a href="http://www.nikkei.com/" target="
 
 ![](img/sample1.png)
 
-### ② また、記事タイトルを選択し、出現した`無料で読む`ボタンを押すことで、`http://www.nikkei.com`上のすべてのページで使用することもできます。
+### ② 記事タイトルを選択し、出現した`無料で読む`ボタンを押すことで、`http://www.nikkei.com`上のすべてのページで使用することもできます。
 
 ![](img/sample2.png)
 
