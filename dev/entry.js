@@ -16,6 +16,7 @@ const styleNhLink = {
   'text-align': 'center',
   'text-decoration': 'none',
   'position': 'absolute',
+  'z-index': '99999',
 };
 const styleNhLinkHover = {
   'opacity': '0.8',
