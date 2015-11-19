@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run webpack:watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && $(npm bin)/webpack",
+    "build": "npm install && npm run webpack",
     "webpack": "$(npm bin)/webpack --progress",
     "webpack:watch": "$(npm bin)/webpack --watch --progress",
     "eslint": "$(npm bin)/eslint 'dev'"
