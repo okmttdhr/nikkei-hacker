@@ -12,7 +12,12 @@
     {
       "matches": [
         "http://www.nikkei.com/*",
-        "https://newspicks.com/*"
+        "https://newspicks.com/*",
+        "http://www.asahi.com/*",
+        "http://mainichi.jp/*",
+        "http://www.sankei.com/*",
+        "http://www.yomiuri.co.jp/*",
+        "http://www3.nhk.or.jp/*"
       ],
       "js": [
         "js/main.js"

@@ -4,7 +4,8 @@ import {getQuery} from './query';
 import {logSelection, getSelection} from './selection';
 
 const body = $('body');
-const textDefault = '無料で読む';
+const textDefault = '類似記事を検索';
+const textFree = '無料で読む';
 const textLoading = '読込中';
 const styleNhLink = {
   'padding': '10px',
@@ -27,7 +28,7 @@ function addReadFreeBtn() {
   const {pathname, host} = window.location;
   if (host !== 'www.nikkei.com' || pathname.split('/')[1] !== 'article') return;
   const btn = $(`<a href="" onclick="" class="cmnc-button" target="_blank"></a>`)
-    .html('<span class="cmn-icon_member">［有料会員限定］</span>&nbsp;' + textDefault);
+    .html('<span class="cmn-icon_member">［有料会員限定］</span>&nbsp;' + textFree);
   const text = $('h1.cmn-article_title .cmnc-middle').text();
   getQuery(text)
     .then((query) => {
