@@ -6,8 +6,10 @@ import config from '../config/secret';
 
 function yahooMaApi(text) {
   return new Promise(function (resolve, reject) {
+    console.log(window.location);
+    const {protocol} = window.location;
     request
-      .get('http://jlp.yahooapis.jp/MAService/V1/parse')
+      .get(protocol + '//jlp.yahooapis.jp/MAService/V1/parse')
       .query({
         appid: config.get('appid'),
         results: 'ma',

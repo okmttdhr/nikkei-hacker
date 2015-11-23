@@ -5,12 +5,14 @@
   "description": "",
   "permissions": [
     "tabs",
-    "http://jlp.yahooapis.jp/*"
+    "http://jlp.yahooapis.jp/*",
+    "https://jlp.yahooapis.jp/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://www.nikkei.com/*"
+        "http://www.nikkei.com/*",
+        "https://newspicks.com/*"
       ],
       "js": [
         "js/main.js"
