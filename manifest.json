@@ -18,7 +18,8 @@
         "http://www.sankei.com/*",
         "http://www.yomiuri.co.jp/*",
         "http://www3.nhk.or.jp/*",
-        "https://twitter.com/*"
+        "https://twitter.com/*",
+        "http://www.huffingtonpost.jp/*"
       ],
       "js": [
         "js/main.js"

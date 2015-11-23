@@ -12,7 +12,7 @@ nikkei-hacker(日経ハッカー)は、<a href="http://www.nikkei.com/" target="
 
 ### ② 記事タイトルを選択し、出現した`類似記事を検索`ボタンをクリック
 
-こちらの機能は、<a href="http://www.nikkei.com/" target="_blank">日経電子版</a>、<a href="https://twitter.com/" target="_blank">Twitter</a>、<a href="https://newspicks.com/" target="_blank">NewsPicks</a>、<a href="http://www.sankei.com/" target="_blank">産経ニュース</a>、<a href="http://www.asahi.com/?iref=com_gnavi_top" target="_blank">朝日新聞デジタル</a>、<a href="http://mainichi.jp/" target="_blank">毎日新聞</a>、<a href="http://www.yomiuri.co.jp/" target="_blank">読売新聞</a>、<a href="http://www3.nhk.or.jp/news/" target="_blank">NHKニュース</a>上のすべてのページに対応しています。
+こちらの機能は、<a href="http://www.nikkei.com/" target="_blank">日経電子版</a>、<a href="https://twitter.com/" target="_blank">Twitter</a>、<a href="https://newspicks.com/" target="_blank">NewsPicks</a>、<a href="http://www.huffingtonpost.jp/" target="_blank">ハフィントンポスト</a>、<a href="http://www.sankei.com/" target="_blank">産経ニュース</a>、<a href="http://www.asahi.com/?iref=com_gnavi_top" target="_blank">朝日新聞デジタル</a>、<a href="http://mainichi.jp/" target="_blank">毎日新聞</a>、<a href="http://www.yomiuri.co.jp/" target="_blank">読売新聞</a>、<a href="http://www3.nhk.or.jp/news/" target="_blank">NHKニュース</a>上のすべてのページに対応しています。
 
 ![](img/sample4.png)
 
